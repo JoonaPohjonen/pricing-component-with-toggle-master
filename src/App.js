@@ -8,7 +8,7 @@ const App = () => {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>Frontend Mentor | [Challenge Name Here]</title>
+          <title>Frontend Mentor | [Pricing component with toggle]</title>
         </Helmet>
       </HelmetProvider>
       
