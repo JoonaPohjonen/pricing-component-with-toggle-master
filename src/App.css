@@ -1,38 +1,421 @@
-.App {
+/*------Fullscreen view------*/
+@import url('https://fonts.google.com/specimen/Montserrat');
+
+/*------------------*/
+body {
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-weight: 700;
+  background-color: rgba(102, 153, 255, 0.1);
+  background-image: url(.././images/bg-bottom.svg);
+}
+
+.attribution {
+  font-size: 11px; text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  border-radius: 15px;
+  padding-bottom: 35px;
+}
+
+/*------for the sizing of the fullscreen boxes------*/
+.middleBox {
+  width: 130%;
+  height: 420px;
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 55px;
+}
+
+.sideBox {
+  background-color: white;
+  width: 140%;
+  height: 400px;
+  margin: auto;
+}
+/*------for the sizing of the fullscreen boxes------*/
+
+h1 {
   text-align: center;
+  padding: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contentSideBySide {
+  display: inline;
+  color: lightgray;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.centerMe {
+  text-align: center;
+  padding-bottom: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.paddingForMe {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.title {
+  text-align: center;
+  padding-top: 25px;
+  color: grey;
+}
+
+.ourPricing {
+  color: grey;
+}
+
+.titleUnique {
+  text-align: center;
+  padding-top: 25px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.price {
+  text-align: center;
+  font-size: 400%;
+  margin: auto;
+  padding-bottom: 20px;
+  color: hsl(232, 13%, 33%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.priceUnique {
+  text-align: center;
+  font-size: 400%;
+  margin: auto;
+  padding-bottom: 20px;
+  color: white;
 }
+
+hr {
+  border-style: solid;
+  width: 85%;
+  color: lightgrey;
+}
+
+.cardText {
+  text-align: center;
+  color: grey;
+}
+
+.cardTextUnique {
+  text-align: center;
+  color: white;
+}
+
+.button {
+  text-align: center;
+  padding-top: 20px;
+}
+
+button {
+  border-radius: 7px;
+  height: 50px;
+  width: 85%;
+  border: solid;
+  color: white;
+  font-weight: 700;
+  font-family: 'Montserrat';
+  cursor: pointer;
+}
+
+button:active {
+  border-color: black;
+}
+
+/*-----Toggle Button-----*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*-----Toggle Button-----*/
+
+.makeRow {
+  display: inline-block;
+  position: relative;
+  width: 235px;
+}
+
+.firstBlock {
+  margin-left: 20%;
+}
+
+.middleRow {
+  position: relative;
+  z-index: 1000;
+  padding-left: 75px;
+  padding-right: 55px;
+}
+
+
+
+
+
+
+
+
+
+
+/*-------Phone view-------*/
+@media screen and (max-width: 1440px) {
+  body {
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 700;
+    background-color: rgba(102, 153, 255, 0.1);
+    background-image: url(.././images/bg-bottom.svg);
+  }
+  
+  .attribution {
+    font-size: 11px; text-align: center;
+  }
+  
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  .container {
+    border-radius: 15px;
+    padding-bottom: 35px;
+  }
+  
+  .middleBox {
+    width: 85%;
+    height: 400px;
+    margin: auto;
+    padding-top: 0;
+    padding-bottom: 35;
+  }
+  
+  .sideBox {
+    background-color: white;
+    width: 85%;
+    height: 400px;
+    margin: auto;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 25px;
+  }
+  
+  .contentSideBySide {
+    display: inline;
+    color: lightgray;
+  }
+  
+  .centerMe {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  
+  .paddingForMe {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  .title {
+    text-align: center;
+    padding-top: 25px;
+    color: grey;
+  }
+  
+  .ourPricing {
+    color: grey;
+  }
+  
+  .titleUnique {
+    text-align: center;
+    padding-top: 25px;
+    color: white;
+  }
+  
+  .price {
+    text-align: center;
+    font-size: 400%;
+    margin: auto;
+    padding-bottom: 20px;
+    color: hsl(232, 13%, 33%);
+  }
+  
+  .priceUnique {
+    text-align: center;
+    font-size: 400%;
+    margin: auto;
+    padding-bottom: 20px;
+    color: white;
+  }
+  
+  hr {
+    border-style: solid;
+    width: 85%;
+    color: lightgrey;
+  }
+  
+  .cardText {
+    text-align: center;
+    color: grey;
+  }
+  
+  .cardTextUnique {
+    text-align: center;
+    color: white;
+  }
+  
+  .button {
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  button {
+    border-radius: 7px;
+    height: 50px;
+    width: 85%;
+    border: solid;
+    color: white;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    cursor: pointer;
+  }
+
+  button:active {
+    border-color: black;
+  }
+  
+  /*-----Toggle Button-----*/
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2196F3;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  /*-----Toggle Button-----*/
+  .makeRow {
+    display: block;
+    width: 100%;
+  }
+
+  .firstBlock {
+    margin-left: 0;
+  }
+
+  .middleRow {
+    position: relative;
+    z-index: 1000;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  }

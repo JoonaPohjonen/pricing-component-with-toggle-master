@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import Page from './content/Page.jsx';
+import React from 'react';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HelmetProvider>
+        <Helmet>
+          <title>Frontend Mentor | [Challenge Name Here]</title>
+        </Helmet>
+      </HelmetProvider>
+      
+      <Page/>
+      <div className="App">
+        <div className="attribution">
+          Challenge by{" "}
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Frontend Mentor
+          </a>
+          . Coded by <a href="https://github.com/JoonaPohjonen">HoodyJones</a>.
+        </div>
+      </div>
+    </>
   );
 }
 
